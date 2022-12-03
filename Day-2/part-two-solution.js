@@ -4,7 +4,7 @@ const fs = require("fs");
 // Get the data from the input file
 const input = fs.readFileSync("input.txt");
 
-// Split the data into an array at each double new line
+// Split the data into an array at each new line
 const data = input.toString().split("\r\n");
 
 let totalScore = 0;
