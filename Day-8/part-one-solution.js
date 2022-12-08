@@ -23,7 +23,7 @@ let addVisible = () => {
 
 // Loop through each row of trees
 for (let i=1; i<(forest.length-1); i++) {
-    // Loop through eah tree in the row
+    // Loop through each tree in the row
     for (let j=1; j<(forest[i].length-1); j++) {
         // Set a visibility flag for each of the directions
         let visible1=true;
