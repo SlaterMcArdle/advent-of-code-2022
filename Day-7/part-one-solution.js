@@ -11,6 +11,9 @@ let totalSubDirSize = 0;
 
 const checkDirSize = () => {
     let subDirSize = 0;
+    let addToSubDir = (fileSize) => {
+        subDirSize += fileSize;
+    }
     let continueFlag = true;
     let increaseStep = () => {
         stepNumber++;
@@ -32,7 +35,7 @@ const checkDirSize = () => {
         let step = data[stepNumber].split(' ');
         switch (true) {
             case (Number.isInteger(parseInt(step[0])) && parseInt(step[0]) <= 100000):
-                subDirSize += (parseInt(step[0]));
+                addToSubDir(parseInt(step[0]));
                 increaseStep();
                 break;
             case (step[0]=='dir'):
